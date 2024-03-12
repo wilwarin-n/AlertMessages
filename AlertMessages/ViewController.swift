@@ -22,6 +22,16 @@ class ViewController: UIViewController {
     }
 
     @IBAction func signupClicked(_ sender: Any) {
+        
+        let alertMessage = UIAlertController(title: "Hata Mesajı!", message: "Email Hatalı Girdiniz", preferredStyle: UIAlertController.Style.alert)
+        
+        let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { <#UIAlertAction#> in
+            print("Clicked OK button")
+        }
+        
+        alertMessage.addAction(okButton)
+        
+        self.present(alertMessage, animated: true, completion: nil)
     }
     
 }
